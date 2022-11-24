@@ -2,35 +2,42 @@ import java.util.Arrays;
 
 public class Passenger {
     String passengerList[];
-    int capacity;
 
 
 
 
-           void transportCapacity (){
+
+
+           void transportCapacity (int capacity){
+
                passengerList = new String[capacity];
            }
+
             void addPassenger(int id, String passengerName){
 
                 passengerList[id] = passengerName;
-                System.out.println("Student added successfully");
+
+                System.out.println("Passenger " + passengerName + " added successfully");
             }
 
-            void viewTotalPassengers(){
 
-                System.out.println("Passenger list " +  Arrays.toString(passengerList));
-            }
 
             void removePassenger (int id){
 
-                passengerList [id] = null;
-                System.out.println("Student removed successfully");
+
+               passengerList [id] = null;
+                System.out.println("Passenger " + passengerList[id] + "removed successfully");
             }
             void updatePassenger (int id, String passengerName) {
                 passengerList[id] = passengerName;
-                System.out.println("Student updated successfully");
+                System.out.println("Passenger " + passengerName + " updated successfully");
             }
-            int totalStudent (){
-                return passengerList.length;
+            void viewTotalPassengers(){
+
+               System.out.println("Total Passenger list " +  Arrays.toString(passengerList));
+              }
+            int totalPassenger (){
+
+               return passengerList.length;
             }
 }
